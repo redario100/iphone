@@ -213,7 +213,7 @@ box-shadow:0 1px 0 rgba(255,255,255,.3)
 display:block;
 width:18px;
 height:18px;
-margin:-9px 2px 0
+margin:11px 2px 0
 }
 
 .ui-checkbox-off:after,.ui-btn.ui-radio-off:after {
@@ -277,7 +277,7 @@ transform:translateX(-100%)!important
 
 .jelly-form {
 position:relative;
-margin-top:45px
+margin-top:23px
 }
 
 .jelly-form input {
@@ -308,7 +308,6 @@ border-top:1px solid white;
 }
 
 .ui-mobile label,.ui-controlgroup-label {
-margin:0 3px!important
 }
 
 img,div,a,ul,li {
@@ -361,7 +360,7 @@ border-style:solid
 }
 
 .ui-body-a,.ui-page-theme-a .ui-body-inherit,html .ui-bar-a .ui-body-inherit,html .ui-body-a .ui-body-inherit,html body .ui-group-theme-a .ui-body-inherit,html .ui-panel-page-container-a {
-background-color:#fdfdfd;
+background-color:white;
 border-color:#ebeaea;
 color:#333;
 text-shadow:0 0 0 #fff
@@ -392,17 +391,18 @@ color:#059
 
 .ui-page-theme-a .ui-btn,html .ui-bar-a .ui-btn,html .ui-body-a .ui-btn,html body .ui-group-theme-a .ui-btn,html head + body .ui-btn.ui-btn-a,/* Button visited */
 .ui-page-theme-a .ui-btn:visited,html .ui-bar-a .ui-btn:visited,html .ui-body-a .ui-btn:visited,html body .ui-group-theme-a .ui-btn:visited,html head + body .ui-btn.ui-btn-a:visited {
-background-color:#fff;
+background-color:white;
 border-color:#f0f0f0;
-color:#333;
+color:grey;
+font-weight:normal;
 text-shadow:0 0 0
 }
 
 .ui-page-theme-a .ui-btn:hover,html .ui-bar-a .ui-btn:hover,html .ui-body-a .ui-btn:hover,html body .ui-group-theme-a .ui-btn:hover,html head + body .ui-btn.ui-btn-a:hover {
-background-color:#f5f5f5;
+background-color:white;
 border-color:#ddd;
 color:#333;
-text-shadow:0 0 0
+text-shadow:0 0 0;
 }
 
 .ui-page-theme-a .ui-btn:active,html .ui-bar-a .ui-btn:active,html .ui-body-a .ui-btn:active,html body .ui-group-theme-a .ui-btn:active,html head + body .ui-btn.ui-btn-a:active {
@@ -1382,7 +1382,7 @@ margin:40px 0
 }
 
 .top-label2 {
-margin:0 auto;
+margin:0 auto !important;
 width:246px;
 left:0;
 right:0;
@@ -1425,7 +1425,6 @@ border-radius:50%
 display:block;
 width:20px;
 height:20px;
-border:2px solid #a2a2a2
 }
 
 input:focus + .side-label::before {
