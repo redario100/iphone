@@ -181,13 +181,7 @@ $.mobile.changePage( "#profil", { transition: "slide" });
 
 function affiche1(q)
 {
-if (localStorage.getItem('validation') == null) {
-$.mobile.changePage( "#creercompte", { transition: "slide" });
-return false;
-}
-else
-{
-$.mobile.changePage( "#page2", { transition: "slide" });
+
  $.ajax({
          data: "affichesservice="+q,
          type: "post",
@@ -210,7 +204,7 @@ $.mobile.changePage( "#page2", { transition: "slide" });
         $('#contentpage2').html('error');
     }
 });
-}
+
 }
 
 
@@ -270,6 +264,14 @@ function affiche11(q)
 
 function addtocart(aa, a,b,c)
 {
+if (localStorage.getItem('validation') == null) {
+$('#panocompte').show();
+$('.pano1').show();
+return false;
+}
+else
+{
+$.mobile.changePage( "#page2", { transition: "slide" });
 $('#idproduct').val(aa);
 $('.imgpanier2').html("<img class='imgpanier' src="+a+">");
 $('.titrepanier').html(b);
@@ -282,7 +284,37 @@ $('#pilo').show();
 setTimeout(function(){ 
 $('#pilo').addClass('bghyn2');
  }, 200);
+}
 
+
+
+}
+
+
+
+function addtocart222(aa, a,b,c)
+{
+if (localStorage.getItem('validation') == null) {
+$('#panocompte').show();
+$('.pano1').show();
+return false;
+}
+else
+{
+$.mobile.changePage( "#page222", { transition: "slide" });
+$('#idproduct').val(aa);
+$('.imgpanier2').html("<img class='imgpanier' src="+a+">");
+$('.titrepanier').html(b);
+var k=$('#pilo'+aa).html();
+$('.descrippanier').html(k);
+//$('.descrippanier').html("Lorum ipsum bener de agio Lorum ipsum bener de agio Lorum ipsum bener de agio");
+$('.prixpanier').html(c+" DH");
+$('.backgrn').show();
+$('#pilo').show();
+setTimeout(function(){ 
+$('#pilo').addClass('bghyn2');
+ }, 200);
+}
 
 
 
@@ -555,11 +587,20 @@ $('#getuserinfox').html(data);
 
 function addtocart2()
 { 
+if (localStorage.getItem('validation') == null) {
+$('#panocompte').show();
+$('.pano1').show();
+return false;
+}
+else
+{
+
 $('.backgrn').show();
 $('#pilo2').show();
 setTimeout(function(){ 
 $('#pilo2').addClass('bghyn2');
  }, 200);
+ }
 }
 
 function ChaineAleatoire2(nbcar)
@@ -722,7 +763,7 @@ border:none !important;
 </style>
 </head>
 <body onload="loadpanier();getuserinfo(localStorage.getItem('email'))">
-<div onclick="$('.pano1').hide();$('.pano').hide();$('.pano2').hide();$('.pano3').hide();"  class="pano1">
+<div onclick="$('.pano1').hide();$('.pano').hide();$('#panocompte').hide();$('.pano2').hide();$('.pano3').hide();"  class="pano1">
 </div>
 <div class="pano">
 <div style="font-size: 18px;padding-bottom: 9px;border-bottom: 1px solid #5f5e5e !important;">Message</div><br/>
@@ -730,6 +771,15 @@ border:none !important;
 Etes-vous sûr de vouloir supprimer ce produit ?
 </br></br>
 <div onclick="supprimpanier()" class="buttonx">Valider</div><div onclick="checkalertehide()" class="buttonx">Annuler</div>
+</div>
+
+
+<div id="panocompte" class="pano">
+<div style="font-size: 18px;padding-bottom: 9px;border-bottom: 1px solid #5f5e5e !important;">Message</div><br/>
+<input type="hidden" id="vivo" value="">
+Vous devez vous inscrire pour passer une commande !
+</br></br>
+<div onclick='$.mobile.changePage( "#creercompte", { transition: "slide" });$("#panocompte").hide();$(".pano1").hide()' class="buttonx">S'inscrire</div><div onclick="$('#panocompte').hide();$('.pano1').hide()" class="buttonx">Annuler</div>
 </div>
 
 <div class="pano2">
