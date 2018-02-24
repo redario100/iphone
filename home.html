@@ -31,9 +31,13 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-html, body, div {
-   
-    -webkit-transition: top 0.2s;
+input {
+    -webkit-border-radius:0; 
+    border-radius:0;
+	-webkit-appearance: none;
+}
+
+div{
 	-webkit-overflow-scrolling: touch; 
 }
 </style>
@@ -778,7 +782,7 @@ Etes-vous sûr de vouloir supprimer ce produit ?
 </div>
 
 
-<div id="panocompte" class="pano">
+<div id="panocompte" class="pano22">
 <div style="font-size: 18px;padding-bottom: 9px;border-bottom: 1px solid #5f5e5e !important;">Message</div><br/>
 <input type="hidden" id="vivo" value="">
 Vous devez vous inscrire pour passer une commande !
@@ -842,12 +846,14 @@ Modification Réussie !
 <div data-role="panel" style="box-shadow: 4px 0px -5px 2em grey !important;" id="left-panel"  data-position-fixed="true" > <!--data-display="overlay"-->
 <ul data-role="listview" class="ui-listview">
 <li data-role="list-divider" role="heading" class="menuleft ui-li ui-li-divider ui-bar-d ui-first-child">Menu</li>
+<div style="margin-top:70px;float:left;width:100%;">
 					<a data-transition="slide" onclick="profil()" href="#"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="user.png"> Mon Profil</div></div></li></a>
 					<a data-transition="slide" onclick="mescommandes(localStorage.getItem('email'))" href="#listedecommande"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx "><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="shopping.png"> Mes Commandes</div></div></li></a>
 					<a data-transition="slide" onclick="<!--affiche11('35')-->" href="#nouveautes"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="percentage.png">  Promotions</div></div></li></a>
 					<a data-transition="slide" onclick="<!--affiche11('36')-->" href="#nouveautes"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="badge.png"> Nouveautés </div></div></li></a>
 					<a data-transition="slide" href="#apropos"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="infos.png"> A Propos</div></div></li></a>
 					<a data-transition="slide" href="#condition"><li data-corners="false" data-shadow="false"  data-wrapperels="div" data-theme="d" class="bnx"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><img class="bora" src="tache.png"> Conditions d'utilisation</div></div></li></a>
+				</div>
 				</ul>   
 
 
@@ -1154,8 +1160,16 @@ Ces fournisseurs de services externes sont liés à Ville verte service par des 
 
 <div data-role="page" style="background-color:white;" id="creercompte">
 <div style="position:absolute;width:100%;height:100%;left:0;right:0;margin-left:auto;margin-right:auto;color:gray;font-size:15px;text-align:center;">
-			<div class="logo33"><img style="width:50px;margin-bottom:10px;" class="imglogo" src="usir.png"><br/>
-			<span style="font-size: 17px;font-family: 'Kaushan Script', cursive, cursive;line-height:16px;color:white;">Merci de vous inscrire pour effectuer votre commande !</span>
+<div class="logo33">
+	<a style="float: left;
+    margin-left: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;" data-transition="slide" data-direction="reverse" href="#page2" data-theme="d"  data-iconpos="notext" data-shadow="false" class="hidebg" data-iconshadow="false"><img class="imgbt" style="vertical-align: middle;width: 24px !important;color: white;margin-top: 7px !important;" src="retour.png"> <span style="font-size: 16px;color: white;vertical-align:-5px;">Retour</span></a>
+			
+<img style="width:50px;margin-bottom:10px;" class="imglogo" src="usir.png"><br/>
+
+			<span style="font-size: 17px;font-family: 'Kaushan Script', cursive, cursive;line-height:16px;color:white;">Merci de vous inscrire <br>pour effectuer votre commande !</span>
 			</div>
 				<br/>
 			<div role="main" style="text-align:left;'Exo 2', sans-serif !important" class="ui-content">
@@ -1181,7 +1195,7 @@ Ces fournisseurs de services externes sont liés à Ville verte service par des 
 
 <label style="margin:40px 0px 20px 0px" id="choixc" class="top-label">Choisissez votre Résidence</label>
     <input type="hidden" value="" id="popo">
-    <input id="how-friend" name="how" onclick="$('#popo').val('Green Town')" type="radio">
+    <input style="margin-top:-20px !important" id="how-friend" name="how" onclick="$('#popo').val('Green Town')" type="radio">
     <label for="how-friend" onclick="$('#popo').val('Green Town')" class="side-label">Green Town</label>
 
     <input id="how-internet" onclick="$('#popo').val('Serena')" name="how" type="radio">

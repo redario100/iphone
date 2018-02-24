@@ -339,6 +339,8 @@ background: #a8e000;
     background: linear-gradient(to right,#a8e000 0%,#8bbf13 40%,#299300 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8e000',endColorstr='#299300',GradientType=1);
     color: #fff;
+	position:fixed !important;
+	width:100%;
     text-shadow: 0 0 0;
     font-weight: 700;
 }
@@ -1135,7 +1137,7 @@ color:#fff
 .ui-mobile-viewport-transitioning,.ui-mobile-viewport-transitioning .ui-page {
 }
 
-.pano, .pano2, .pano3{
+.pano, .pano2, .pano3, .pano22{
 background-color:#fff;
 width:300px;
 padding:12px;
