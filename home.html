@@ -37,9 +37,6 @@ input {
 	-webkit-appearance: none;
 }
 
-div, body, html{
-	-webkit-overflow-scrolling: touch; 
-}
 </style>
 
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -130,6 +127,7 @@ $( "#emailo" ).val("");
 $( "#nappart" ).val("");
 localStorage.setItem('validation', 'ok');
 localStorage.setItem('email', email);
+
 var kiki = ChaineAleatoire(8);
 localStorage.setItem('panier', kiki);
 document.location.href='home.html';
@@ -687,7 +685,17 @@ $.ajax({
 	$('.pano3').show();
 	loadpanier();
 	affichepanier();
-	var kiki = ChaineAleatoire(8);
+		function ChaineAleatoire3(nbcar)
+{
+	var ListeCar = new Array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9");
+	var Chaine ='';
+	for(i = 0; i < nbcar; i++)
+	{
+		Chaine = Chaine + ListeCar[Math.floor(Math.random()*ListeCar.length)];
+	}
+	return Chaine;
+}
+	var kiki = ChaineAleatoire3(8);
 	localStorage.setItem('panier', kiki);
     },
     error: function()
